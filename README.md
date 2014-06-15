@@ -25,6 +25,7 @@ grunt.initConfig({
             objectToExport: 'library', // optional, internal object that will be exported
             amdModuleId: 'id', // optional, if missing the AMD module will be anonymous
             globalAlias: 'alias', // optional, changes the name of the global variable
+            indent: '  ', // optional, indent source code
             deps: { // optional
                 'default': ['foo', 'bar'],
                 amd: ['foobar', 'barbar'],
@@ -51,9 +52,28 @@ The following predefined [Handlebars](http://handlebarsjs.com/)-templates are av
     if `objectToExport` option is not specified then `module.exports` value will be used by default
 
 The template that should be applied can be specified by `template` option (e.g. `'umd'` or `'unit'`).
-You can create and use your own template (see predefined templates for examples). 
+You can create and use your own template (see predefined templates for examples).
 The path to the template file should be set relative to Gruntfile.
 
 ## Demo
 
-Examine `Gruntfile.js`, install dependencies (`npm install`) and execute `grunt`. You should see some `/output`.
+1. Install dependencies - `npm install`
+2. Go to demo - `cd demo`
+3. Execute demo - `grunt`
+
+You should see some `/output` after this. Study `Gruntfile.js` to understand how it generates.
+
+## Contributors
+
+* [Alex Lawrence](https://github.com/alexlawrence) - Project founder, previous maintainer
+* [Juho Vepsäläinen](https://github.com/bebraw) - Handlerbars fixes etc., current maintainer
+* [Stéphane Bachelier](https://github.com/stephanebachelier) - Code indentation option
+* [Milan Adamovsky](https://github.com/adamovsky) - Enhanced configurability and Rails assets pipeline support
+* [Brian J. Miller](https://github.com/brianjmiller) - Indent only non-empty lines
+* [Denis](https://github.com/gamtiq) - Add default value for objectToExport and template option support
+* [Boris Cherny](https://github.com/eighttrackmind) - Properly export module IDs containing dashes to browser globals
+* [Paulo Gaspar](https://github.com/paulogaspar7) - Fix GitHub user name at repo and homepage URLs
+
+## License
+
+MIT. See LICENSE for more info.
